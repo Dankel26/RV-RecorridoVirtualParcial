@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62676a35121596941b858d898217b0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuertaCamEscena
-  numeroEscena: 2
+  numeroEscena: 3
 --- !u!1001 &693314070
 PrefabInstance:
   m_ObjectHideFlags: 0

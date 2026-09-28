@@ -11,6 +11,7 @@ public class PantallaTutorial : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip sonidoAbrir;
 
+
     private bool estaAbierto = false;
 
     void Start()
@@ -21,6 +22,7 @@ public class PantallaTutorial : MonoBehaviour
             panelAviso.SetActive(false);
             panelTutorial.SetActive(false);
         }
+
 
         if (audioSource == null)
         {
@@ -37,6 +39,7 @@ public class PantallaTutorial : MonoBehaviour
         estaAbierto = !estaAbierto;
         panelAviso.SetActive(estaAbierto);
         panelTutorial.SetActive(estaAbierto);
+
 
         // Reproducir sonido
         if (audioSource != null && sonidoAbrir != null)

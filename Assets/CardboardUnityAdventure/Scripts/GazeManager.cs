@@ -24,7 +24,8 @@ public class GazeManager : MonoBehaviour
     [SerializeField] private GameObject gazeBarCanvas;
     [SerializeField] Image fillIndicator;
     [Tooltip("Time in seg")]
-    [SerializeField] private float timeForSelection =2.5f;
+    [SerializeField] private float timeForSelection =2f;
+    [SerializeField] public float distanciaRayo = 10f;
 
     private float timeCounter;
     private float timeProggres;
@@ -38,10 +39,19 @@ public class GazeManager : MonoBehaviour
 
     public void Update()
     {
-        if (runTimer)
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
+        // Si miramos a algo que está en la capa "Interactuable"
+        if (Physics.Raycast(ray, out hit, distanciaRayo))
         {
-            timeProggres += Time.deltaTime;
-            AddValue(timeProggres);
+            GameObject interactuable = hit.collider.GetComponent<GameObject>();
+
+            if (runTimer)
+            {
+                timeProggres += Time.deltaTime;
+                AddValue(timeProggres);
+            }
         }
     }
     public void SetUpGaze(float timeForSelection) 

@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SalirAplicacion : MonoBehaviour
 {
-    public void SalirDelJuego()
+    public void SalirJuego()
     {
         // Cierra la aplicación compilada
         Application.Quit();

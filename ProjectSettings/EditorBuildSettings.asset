@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pasillo.unity
     guid: 0e640b1a34baad342bde3b92dbf75c92
+  - enabled: 1
+    path: Assets/Scenes/Maquinas.unity
+    guid: 4ae0c9ab84d738c4a97aa00bc759c768
   - enabled: 0
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.19.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 145a2a45d7bc746b19cb68410368bf96

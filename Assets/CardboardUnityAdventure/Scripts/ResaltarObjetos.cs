@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class ResaltarObjetos : MonoBehaviour
 {
-    [Header("Configuración del Resalte")]
-    [Tooltip("Color que tomará el objeto al mirarlo (Cian o Amarillo recomendados)")]
+    [Header("Configuracion del Resalte")]
+    [Tooltip("Color que tomara el objeto al mirarlo")]
     [SerializeField] private Color colorResaltado = Color.cyan;
     
-    [Tooltip("Si se activa, usará brillo de emisión (HDR). Si no, cambiará el color base del material.")]
+    [Tooltip("Si se activa, usara brillo de emision (HDR). Si no, cambiara el color base del material.")]
     [SerializeField] private bool usarEmision = true;
     
     [Range(0.5f, 3f)]
@@ -42,7 +42,7 @@ public class ResaltarObjetos : MonoBehaviour
         }
     }
 
-    // Este método lo llama automáticamente tu CameraPointerManager al mirar el objeto
+    // Este metodo llama automaticamente CameraPointerManager al mirar el objeto
     public void OnPointerEnterXR()
     {
         if (materialInstancia == null) return;
@@ -58,7 +58,7 @@ public class ResaltarObjetos : MonoBehaviour
         }
     }
 
-    // Este método lo llama automáticamente tu CameraPointerManager al quitar la vista
+    // Este metodo llama automaticamente CameraPointerManager al quitar la vista
     public void OnPointerExitXR()
     {
         if (materialInstancia == null) return;
@@ -75,7 +75,7 @@ public class ResaltarObjetos : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Limpieza de memoria para no saturar dispositivos móviles
+        // Limpieza de memoria para no saturar dispositivos moviles
         if (materialInstancia != null)
         {
             Destroy(materialInstancia);

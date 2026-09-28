@@ -3,7 +3,7 @@ using UnityEngine;
 public class PantallaTutorial : MonoBehaviour
 {
     [Header("Referencias de UI")]
-    [Tooltip("Arrastra aquí el Canvas o Panel 3D con el texto de la misión")]
+    [Tooltip("Arrastra aqui el Canvas o Panel 3D con el texto de la mision")]
     [SerializeField] private GameObject panelAviso;
     [SerializeField] private GameObject panelTutorial;
 
@@ -28,27 +28,27 @@ public class PantallaTutorial : MonoBehaviour
         }
     }
 
-    // Método que invoca tu CameraPointerManager cuando el Gaze termina
+    // Metodo que invoca CameraPointerManager cuando el Gaze termina
     public void OnPointerClickXR()
     {
         if (panelAviso == null && panelTutorial == null) return;
 
-        // Alternar visibilidad (si está abierto lo cierra, si está cerrado lo abre)
+        // Alternar visibilidad (si esta abierto lo cierra, si esta cerrado lo abre)
         estaAbierto = !estaAbierto;
         panelAviso.SetActive(estaAbierto);
         panelTutorial.SetActive(estaAbierto);
 
-        // Reproducir sonido si está asignado
+        // Reproducir sonido
         if (audioSource != null && sonidoAbrir != null)
         {
             audioSource.PlayOneShot(sonidoAbrir);
         }
     }
 
-    // Feedback visual opcional cuando el puntero pasa sobre la pantalla
+    
     public void OnPointerEnterXR()
     {
-        // Puedes agregar lógica para que la pantalla brille o resalte
+    
     }
 
     public void OnPointerExitXR()

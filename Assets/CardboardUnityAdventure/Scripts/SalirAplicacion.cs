@@ -5,7 +5,7 @@ public class SalirAplicacion : MonoBehaviour
 {
     public void SalirJuego()
     {
-        // Cierra la aplicación compilada
+        // Cierra la aplicacion compilada
         Application.Quit();
 
         // Opcional: Esto detiene el modo Play en el Editor de Unity para que puedas probarlo

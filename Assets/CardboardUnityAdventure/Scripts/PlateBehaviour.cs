@@ -32,6 +32,12 @@ public class PlateBehaviour : MonoBehaviour
             }
             heldObject = grabManager.heldItem;
             grabManager.heldItem.GetComponent<GrabObject>().Place(holder.transform.position);
+
+            if (ClimaxManager.Instance != null)
+            {
+                ClimaxManager.Instance.RegistrarBateriaInstalada();
+            }
+
         }
         else
         {
